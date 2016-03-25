@@ -1,17 +1,36 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 
 import {} from './style.less';
 
-class App extends Component {
-    constructor(props) {
-        super(props);
-    }
+import MessageList from '../message-list';
+import MessageEntryBox from '../message-entry-box';
+import * as messageActionCreators from '../../actions/message-actions';
 
+class App extends Component {
     render() {
         return (
-            <div>Hello world from a React Component</div>
+            <div>
+                <MessageList messages={this.props.message} />
+                <MessageEntryBox
+                    value={this.props.currentMessage}
+                    onChange={this.props.updateMessage}
+                    onSubmit={this.props.addMessage} />
+            </div>
         );
     }
 }
 
-export default App;
+function mapStateToProps(state) {
+    return {
+        message: state.messages,
+        currentMessage: state.currentMessage
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators(messageActionCreators, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -21,6 +21,12 @@ const loaders = [
     }
 ];
 
+const aliases = {
+    components: path.resolve(CLIENT_DIR, 'components'),
+    reducers: path.resolve(CLIENT_DIR, 'reducers'),
+    actions: path.resolve(CLIENT_DIR, 'actions')
+}
+
 module.exports = [
     {
         name: 'client',
@@ -36,7 +42,7 @@ module.exports = [
         },
         resolve: {
             alias: {
-                components: path.resolve(CLIENT_DIR, 'components')
+                aliases
             }
         },
         plugins: [
@@ -61,7 +67,7 @@ module.exports = [
         },
         resolve: {
             alias: {
-                components: path.resolve(CLIENT_DIR, 'components')
+                aliases
             }
         },
         plugins: [
