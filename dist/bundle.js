@@ -58,24 +58,29 @@
 
 	var _reactRedux = __webpack_require__(169);
 
-	var _app = __webpack_require__(180);
+	var _app = __webpack_require__(177);
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _reducers = __webpack_require__(185);
+	var _reducers = __webpack_require__(182);
 
 	var _reducers2 = _interopRequireDefault(_reducers);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	// import App from './components/app'
+
+
 	var initialState = window.INITIAL_STATE;
+	// import reducers from './reducers';
+
 	var store = (0, _redux.CreateStore)((0, _reducers2.default)(initialState));
 
 	_reactDom2.default.render(_react2.default.createElement(
 	    _reactRedux.Provider,
 	    null,
 	    _react2.default.createElement(_app2.default, null)
-	), app);
+	), document.getElementById('app'));
 
 /***/ },
 /* 1 */
@@ -20544,15 +20549,15 @@
 
 	var _wrapActionCreators2 = _interopRequireDefault(_wrapActionCreators);
 
-	var _isPlainObject = __webpack_require__(175);
+	var _isPlainObject = __webpack_require__(161);
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _hoistNonReactStatics = __webpack_require__(178);
+	var _hoistNonReactStatics = __webpack_require__(175);
 
 	var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
-	var _invariant = __webpack_require__(179);
+	var _invariant = __webpack_require__(176);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
@@ -20897,138 +20902,6 @@
 
 /***/ },
 /* 175 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var isHostObject = __webpack_require__(176),
-	    isObjectLike = __webpack_require__(177);
-
-	/** `Object#toString` result references. */
-	var objectTag = '[object Object]';
-
-	/** Used for built-in method references. */
-	var objectProto = Object.prototype;
-
-	/** Used to resolve the decompiled source of functions. */
-	var funcToString = Function.prototype.toString;
-
-	/** Used to infer the `Object` constructor. */
-	var objectCtorString = funcToString.call(Object);
-
-	/**
-	 * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
-	 * of values.
-	 */
-	var objectToString = objectProto.toString;
-
-	/** Built-in value references. */
-	var getPrototypeOf = Object.getPrototypeOf;
-
-	/**
-	 * Checks if `value` is a plain object, that is, an object created by the
-	 * `Object` constructor or one with a `[[Prototype]]` of `null`.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
-	 * @example
-	 *
-	 * function Foo() {
-	 *   this.a = 1;
-	 * }
-	 *
-	 * _.isPlainObject(new Foo);
-	 * // => false
-	 *
-	 * _.isPlainObject([1, 2, 3]);
-	 * // => false
-	 *
-	 * _.isPlainObject({ 'x': 0, 'y': 0 });
-	 * // => true
-	 *
-	 * _.isPlainObject(Object.create(null));
-	 * // => true
-	 */
-	function isPlainObject(value) {
-	  if (!isObjectLike(value) ||
-	      objectToString.call(value) != objectTag || isHostObject(value)) {
-	    return false;
-	  }
-	  var proto = getPrototypeOf(value);
-	  if (proto === null) {
-	    return true;
-	  }
-	  var Ctor = proto.constructor;
-	  return (typeof Ctor == 'function' &&
-	    Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString);
-	}
-
-	module.exports = isPlainObject;
-
-
-/***/ },
-/* 176 */
-/***/ function(module, exports) {
-
-	/**
-	 * Checks if `value` is a host object in IE < 9.
-	 *
-	 * @private
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is a host object, else `false`.
-	 */
-	function isHostObject(value) {
-	  // Many host objects are `Object` objects that can coerce to strings
-	  // despite having improperly defined `toString` methods.
-	  var result = false;
-	  if (value != null && typeof value.toString != 'function') {
-	    try {
-	      result = !!(value + '');
-	    } catch (e) {}
-	  }
-	  return result;
-	}
-
-	module.exports = isHostObject;
-
-
-/***/ },
-/* 177 */
-/***/ function(module, exports) {
-
-	/**
-	 * Checks if `value` is object-like. A value is object-like if it's not `null`
-	 * and has a `typeof` result of "object".
-	 *
-	 * @static
-	 * @memberOf _
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
-	 * @example
-	 *
-	 * _.isObjectLike({});
-	 * // => true
-	 *
-	 * _.isObjectLike([1, 2, 3]);
-	 * // => true
-	 *
-	 * _.isObjectLike(_.noop);
-	 * // => false
-	 *
-	 * _.isObjectLike(null);
-	 * // => false
-	 */
-	function isObjectLike(value) {
-	  return !!value && typeof value == 'object';
-	}
-
-	module.exports = isObjectLike;
-
-
-/***/ },
-/* 178 */
 /***/ function(module, exports) {
 
 	/**
@@ -21074,7 +20947,7 @@
 
 
 /***/ },
-/* 179 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -21132,7 +21005,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 180 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21151,17 +21024,17 @@
 
 	var _redux = __webpack_require__(159);
 
-	__webpack_require__(181);
+	__webpack_require__(178);
 
-	var _messageList = __webpack_require__(182);
+	var _messageList = __webpack_require__(179);
 
 	var _messageList2 = _interopRequireDefault(_messageList);
 
-	var _messageEntryBox = __webpack_require__(183);
+	var _messageEntryBox = __webpack_require__(180);
 
 	var _messageEntryBox2 = _interopRequireDefault(_messageEntryBox);
 
-	var _messageActions = __webpack_require__(184);
+	var _messageActions = __webpack_require__(181);
 
 	var messageActionCreators = _interopRequireWildcard(_messageActions);
 
@@ -21174,6 +21047,13 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	// import MessageList from '../message-list';
+
+	// import MessageEntryBox from '../message-entry-box';
+
+	// import * as messageActionCreators from '../../actions/message-actions';
+
 
 	var App = function (_Component) {
 	    _inherits(App, _Component);
@@ -21216,13 +21096,13 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(App);
 
 /***/ },
-/* 181 */
+/* 178 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 182 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21277,10 +21157,14 @@
 	exports.default = MessageList;
 
 /***/ },
-/* 183 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -21306,6 +21190,19 @@
 	    }
 
 	    _createClass(MessageEntryBox, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "message-entry-box" },
+	                _react2.default.createElement("textarea", {
+	                    name: "message",
+	                    value: this.props.value,
+	                    onChange: this.handleChange.bind(this),
+	                    onKeyPress: this.handleKeyPress.bind(this) })
+	            );
+	        }
+	    }, {
 	        key: "handleChange",
 	        value: function handleChange(event) {
 	            this.props.onChange(event.target.value);
@@ -21319,26 +21216,15 @@
 	                this.props.onSubmit();
 	            }
 	        }
-	    }, {
-	        key: "render",
-	        value: function render() {
-	            return _react2.default.createElement(
-	                "div",
-	                { className: "message-entry-box" },
-	                _react2.default.createElement("textarea", {
-	                    name: "message",
-	                    value: this.props.value,
-	                    onChange: this.handleChange.bind(this),
-	                    onKeyPress: this.handleKeyPress.bind(this) })
-	            );
-	        }
 	    }]);
 
 	    return MessageEntryBox;
 	}(_react.Component);
 
+	exports.default = MessageEntryBox;
+
 /***/ },
-/* 184 */
+/* 181 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21360,7 +21246,7 @@
 	}
 
 /***/ },
-/* 185 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21397,7 +21283,7 @@
 	    };
 	};
 
-	var _messageActions = __webpack_require__(184);
+	var _messageActions = __webpack_require__(181);
 
 /***/ }
 /******/ ]);
