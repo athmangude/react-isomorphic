@@ -32,6 +32,7 @@ module.exports = [
     name: 'client',
     target: 'web',
     context: CLIENT_DIR,
+    devtool: 'eval-source-map',
     entry: './index.js',
     output: {
         path: DIST_DIR,
@@ -51,6 +52,7 @@ module.exports = [
     name: 'server',
     target: 'node',
     context: CLIENT_DIR,
+    devtool: 'eval-source-map',
     entry: {
         app: 'components/app/index.js'
     },

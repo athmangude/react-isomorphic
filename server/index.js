@@ -4,7 +4,7 @@ import handlebars from 'express-handlebars';
 
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import {CreateStore} from 'redux';
+import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 
 import App from './generated/app';
@@ -26,7 +26,7 @@ app.get('/', (request, response) => {
         messages: []
     };
 
-    const store = CreateStore((state=initialState) => state);
+    const store = createStore((state=initialState) => state);
     const appContent = ReactDOMServer.renderToString(
         <Provider store={store}>
             <App />
@@ -35,7 +35,7 @@ app.get('/', (request, response) => {
 
     response.render('app', {
         app: appContent,
-        initialState: JSON.stringify(initialState);
+        initialState: JSON.stringify(initialState)
     });
 });
 

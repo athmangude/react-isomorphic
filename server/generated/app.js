@@ -45,116 +45,31 @@ module.exports =
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRedux = __webpack_require__(2);
-
-	var _redux = __webpack_require__(3);
-
-	__webpack_require__(4);
-
-	var _messageList = __webpack_require__(8);
-
-	var _messageList2 = _interopRequireDefault(_messageList);
-
-	var _messageEntryBox = __webpack_require__(9);
-
-	var _messageEntryBox2 = _interopRequireDefault(_messageEntryBox);
-
-	var _messageActions = __webpack_require__(10);
-
-	var messageActionCreators = _interopRequireWildcard(_messageActions);
-
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	// import MessageList from '../message-list';
-
-	// import MessageEntryBox from '../message-entry-box';
-
-	// import * as messageActionCreators from '../../actions/message-actions';
-
-
-	var App = function (_Component) {
-	    _inherits(App, _Component);
-
-	    function App() {
-	        _classCallCheck(this, App);
-
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(App).apply(this, arguments));
-	    }
-
-	    _createClass(App, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(_messageList2.default, { messages: this.props.message }),
-	                _react2.default.createElement(_messageEntryBox2.default, {
-	                    value: this.props.currentMessage,
-	                    onChange: this.props.updateMessage,
-	                    onSubmit: this.props.addMessage })
-	            );
-	        }
-	    }]);
-
-	    return App;
-	}(_react.Component);
-
-	function mapStateToProps(state) {
-	    return {
-	        message: state.messages,
-	        currentMessage: state.currentMessage
-	    };
-	}
-
-	function mapDispatchToProps(dispatch) {
-	    return (0, _redux.bindActionCreators)(messageActionCreators, dispatch);
-	}
-
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(App);
+	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = __webpack_require__(1);\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRedux = __webpack_require__(2);\n\nvar _redux = __webpack_require__(3);\n\n__webpack_require__(4);\n\nvar _messageList = __webpack_require__(8);\n\nvar _messageList2 = _interopRequireDefault(_messageList);\n\nvar _messageEntryBox = __webpack_require__(9);\n\nvar _messageEntryBox2 = _interopRequireDefault(_messageEntryBox);\n\nvar _messageActions = __webpack_require__(10);\n\nvar messageActionCreators = _interopRequireWildcard(_messageActions);\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\n// import MessageList from '../message-list';\n\n// import MessageEntryBox from '../message-entry-box';\n\n// import * as messageActionCreators from '../../actions/message-actions';\n\n\nvar App = function (_Component) {\n    _inherits(App, _Component);\n\n    function App() {\n        _classCallCheck(this, App);\n\n        return _possibleConstructorReturn(this, Object.getPrototypeOf(App).apply(this, arguments));\n    }\n\n    _createClass(App, [{\n        key: 'render',\n        value: function render() {\n            return _react2.default.createElement(\n                'div',\n                null,\n                _react2.default.createElement(_messageList2.default, { messages: this.props.message }),\n                _react2.default.createElement(_messageEntryBox2.default, {\n                    value: this.props.currentMessage,\n                    onChange: this.props.updateMessage,\n                    onSubmit: this.props.addMessage })\n            );\n        }\n    }]);\n\n    return App;\n}(_react.Component);\n\nfunction mapStateToProps(state) {\n    return {\n        message: state.messages,\n        currentMessage: state.currentMessage\n    };\n}\n\nfunction mapDispatchToProps(dispatch) {\n    return (0, _redux.bindActionCreators)(messageActionCreators, dispatch);\n}\n\nexports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(App);//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb21wb25lbnRzL2FwcC9pbmRleC5qcz9iYjE2Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7O0FBQUE7Ozs7QUFDQTs7QUFDQTs7QUFFQTs7QUFHQTs7OztBQUVBOzs7O0FBRUE7O0lBQVk7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFFTjs7Ozs7Ozs7Ozs7aUNBQ087QUFDTCxtQkFDSTs7O2dCQUNJLHVEQUFhLFVBQVUsS0FBSyxLQUFMLENBQVcsT0FBWCxFQUF2QixDQURKO2dCQUVJO0FBQ0ksMkJBQU8sS0FBSyxLQUFMLENBQVcsY0FBWDtBQUNQLDhCQUFVLEtBQUssS0FBTCxDQUFXLGFBQVg7QUFDViw4QkFBVSxLQUFLLEtBQUwsQ0FBVyxVQUFYLEVBSGQsQ0FGSjthQURKLENBREs7Ozs7V0FEUDs7O0FBY04sU0FBUyxlQUFULENBQXlCLEtBQXpCLEVBQWdDO0FBQzVCLFdBQU87QUFDSCxpQkFBUyxNQUFNLFFBQU47QUFDVCx3QkFBZ0IsTUFBTSxjQUFOO0tBRnBCLENBRDRCO0NBQWhDOztBQU9BLFNBQVMsa0JBQVQsQ0FBNEIsUUFBNUIsRUFBc0M7QUFDbEMsV0FBTywrQkFBbUIscUJBQW5CLEVBQTBDLFFBQTFDLENBQVAsQ0FEa0M7Q0FBdEM7O2tCQUllLHlCQUFRLGVBQVIsRUFBeUIsa0JBQXpCLEVBQTZDLEdBQTdDIiwiZmlsZSI6IjAuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHtDb21wb25lbnR9IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7Y29ubmVjdH0gZnJvbSAncmVhY3QtcmVkdXgnO1xuaW1wb3J0IHtiaW5kQWN0aW9uQ3JlYXRvcnN9IGZyb20gJ3JlZHV4JztcblxuaW1wb3J0IHt9IGZyb20gJy4vc3R5bGUubGVzcyc7XG5cbi8vIGltcG9ydCBNZXNzYWdlTGlzdCBmcm9tICcuLi9tZXNzYWdlLWxpc3QnO1xuaW1wb3J0IE1lc3NhZ2VMaXN0IGZyb20gJ2NvbXBvbmVudHMvbWVzc2FnZS1saXN0Jztcbi8vIGltcG9ydCBNZXNzYWdlRW50cnlCb3ggZnJvbSAnLi4vbWVzc2FnZS1lbnRyeS1ib3gnO1xuaW1wb3J0IE1lc3NhZ2VFbnRyeUJveCBmcm9tICdjb21wb25lbnRzL21lc3NhZ2UtZW50cnktYm94Jztcbi8vIGltcG9ydCAqIGFzIG1lc3NhZ2VBY3Rpb25DcmVhdG9ycyBmcm9tICcuLi8uLi9hY3Rpb25zL21lc3NhZ2UtYWN0aW9ucyc7XG5pbXBvcnQgKiBhcyBtZXNzYWdlQWN0aW9uQ3JlYXRvcnMgZnJvbSAnYWN0aW9ucy9tZXNzYWdlLWFjdGlvbnMnO1xuXG5jbGFzcyBBcHAgZXh0ZW5kcyBDb21wb25lbnQge1xuICAgIHJlbmRlcigpIHtcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgPE1lc3NhZ2VMaXN0IG1lc3NhZ2VzPXt0aGlzLnByb3BzLm1lc3NhZ2V9IC8+XG4gICAgICAgICAgICAgICAgPE1lc3NhZ2VFbnRyeUJveFxuICAgICAgICAgICAgICAgICAgICB2YWx1ZT17dGhpcy5wcm9wcy5jdXJyZW50TWVzc2FnZX1cbiAgICAgICAgICAgICAgICAgICAgb25DaGFuZ2U9e3RoaXMucHJvcHMudXBkYXRlTWVzc2FnZX1cbiAgICAgICAgICAgICAgICAgICAgb25TdWJtaXQ9e3RoaXMucHJvcHMuYWRkTWVzc2FnZX0gLz5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZnVuY3Rpb24gbWFwU3RhdGVUb1Byb3BzKHN0YXRlKSB7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgbWVzc2FnZTogc3RhdGUubWVzc2FnZXMsXG4gICAgICAgIGN1cnJlbnRNZXNzYWdlOiBzdGF0ZS5jdXJyZW50TWVzc2FnZVxuICAgIH07XG59XG5cbmZ1bmN0aW9uIG1hcERpc3BhdGNoVG9Qcm9wcyhkaXNwYXRjaCkge1xuICAgIHJldHVybiBiaW5kQWN0aW9uQ3JlYXRvcnMobWVzc2FnZUFjdGlvbkNyZWF0b3JzLCBkaXNwYXRjaCk7XG59XG5cbmV4cG9ydCBkZWZhdWx0IGNvbm5lY3QobWFwU3RhdGVUb1Byb3BzLCBtYXBEaXNwYXRjaFRvUHJvcHMpKEFwcCk7XG5cblxuXG4vKiogV0VCUEFDSyBGT09URVIgKipcbiAqKiAuL2NvbXBvbmVudHMvYXBwL2luZGV4LmpzXG4gKiovIl0sInNvdXJjZVJvb3QiOiIifQ==");
 
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
 
-	module.exports = require("react");
+	eval("module.exports = require(\"react\");//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWFjdFwiPzNjNjIiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiMS5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcInJlYWN0XCIpO1xuXG5cbi8qKioqKioqKioqKioqKioqKlxuICoqIFdFQlBBQ0sgRk9PVEVSXG4gKiogZXh0ZXJuYWwgXCJyZWFjdFwiXG4gKiogbW9kdWxlIGlkID0gMVxuICoqIG1vZHVsZSBjaHVua3MgPSAwXG4gKiovIl0sInNvdXJjZVJvb3QiOiIifQ==");
 
 /***/ },
 /* 2 */
 /***/ function(module, exports) {
 
-	module.exports = require("react-redux");
+	eval("module.exports = require(\"react-redux\");//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWFjdC1yZWR1eFwiP2NhNjQiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiMi5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcInJlYWN0LXJlZHV4XCIpO1xuXG5cbi8qKioqKioqKioqKioqKioqKlxuICoqIFdFQlBBQ0sgRk9PVEVSXG4gKiogZXh0ZXJuYWwgXCJyZWFjdC1yZWR1eFwiXG4gKiogbW9kdWxlIGlkID0gMlxuICoqIG1vZHVsZSBjaHVua3MgPSAwXG4gKiovIl0sInNvdXJjZVJvb3QiOiIifQ==");
 
 /***/ },
 /* 3 */
 /***/ function(module, exports) {
 
-	module.exports = require("redux");
+	eval("module.exports = require(\"redux\");//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWR1eFwiPzVjOWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiMy5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcInJlZHV4XCIpO1xuXG5cbi8qKioqKioqKioqKioqKioqKlxuICoqIFdFQlBBQ0sgRk9PVEVSXG4gKiogZXh0ZXJuYWwgXCJyZWR1eFwiXG4gKiogbW9kdWxlIGlkID0gM1xuICoqIG1vZHVsZSBjaHVua3MgPSAwXG4gKiovIl0sInNvdXJjZVJvb3QiOiIifQ==");
 
 /***/ },
 /* 4 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	eval("// removed by extract-text-webpack-plugin//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb21wb25lbnRzL2FwcC9zdHlsZS5sZXNzPzBkNDgiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiNC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIHJlbW92ZWQgYnkgZXh0cmFjdC10ZXh0LXdlYnBhY2stcGx1Z2luXG5cblxuLyoqKioqKioqKioqKioqKioqXG4gKiogV0VCUEFDSyBGT09URVJcbiAqKiAuL2NvbXBvbmVudHMvYXBwL3N0eWxlLmxlc3NcbiAqKiBtb2R1bGUgaWQgPSA0XG4gKiogbW9kdWxlIGNodW5rcyA9IDBcbiAqKi8iXSwic291cmNlUm9vdCI6IiJ9");
 
 /***/ },
 /* 5 */,
@@ -163,145 +78,19 @@ module.exports =
 /* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var MessageList = function (_Component) {
-	    _inherits(MessageList, _Component);
-
-	    function MessageList(props) {
-	        _classCallCheck(this, MessageList);
-
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(MessageList).call(this, props));
-	    }
-
-	    _createClass(MessageList, [{
-	        key: "render",
-	        value: function render() {
-	            return _react2.default.createElement(
-	                "ol",
-	                { className: "message-list" },
-	                this.props.messages.map(function (message, index) {
-	                    return _react2.default.createElement(
-	                        "li",
-	                        { key: "message-" + index },
-	                        message.text
-	                    );
-	                })
-	            );
-	        }
-	    }]);
-
-	    return MessageList;
-	}(_react.Component);
-
-	exports.default = MessageList;
+	eval("\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = __webpack_require__(1);\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar MessageList = function (_Component) {\n    _inherits(MessageList, _Component);\n\n    function MessageList(props) {\n        _classCallCheck(this, MessageList);\n\n        return _possibleConstructorReturn(this, Object.getPrototypeOf(MessageList).call(this, props));\n    }\n\n    _createClass(MessageList, [{\n        key: \"render\",\n        value: function render() {\n            return _react2.default.createElement(\n                \"ol\",\n                { className: \"message-list\" },\n                this.props.messages.map(function (message, index) {\n                    return _react2.default.createElement(\n                        \"li\",\n                        { key: \"message-\" + index },\n                        message.text\n                    );\n                })\n            );\n        }\n    }]);\n\n    return MessageList;\n}(_react.Component);\n\nexports.default = MessageList;//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb21wb25lbnRzL21lc3NhZ2UtbGlzdC9pbmRleC5qcz9jZWM0Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7O0FBQUE7Ozs7Ozs7Ozs7OztJQUVNOzs7QUFDRixhQURFLFdBQ0YsQ0FBWSxLQUFaLEVBQW1COzhCQURqQixhQUNpQjs7c0VBRGpCLHdCQUVRLFFBRFM7S0FBbkI7O2lCQURFOztpQ0FLTztBQUNMLG1CQUNJOztrQkFBSSxXQUFVLGNBQVYsRUFBSjtnQkFDSyxLQUFLLEtBQUwsQ0FBVyxRQUFYLENBQW9CLEdBQXBCLENBQXdCLFVBQUMsT0FBRCxFQUFVLEtBQVYsRUFBb0I7QUFDekMsMkJBQ0k7OzBCQUFJLGtCQUFnQixLQUFoQixFQUFKO3dCQUNLLFFBQVEsSUFBUjtxQkFGVCxDQUR5QztpQkFBcEIsQ0FEN0I7YUFESixDQURLOzs7O1dBTFA7OztrQkFvQlMiLCJmaWxlIjoiOC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwge0NvbXBvbmVudH0gZnJvbSAncmVhY3QnO1xuXG5jbGFzcyBNZXNzYWdlTGlzdCBleHRlbmRzIENvbXBvbmVudCB7XG4gICAgY29uc3RydWN0b3IocHJvcHMpIHtcbiAgICAgICAgc3VwZXIocHJvcHMpO1xuICAgIH1cblxuICAgIHJlbmRlcigpIHtcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIDxvbCBjbGFzc05hbWU9XCJtZXNzYWdlLWxpc3RcIj5cbiAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5tZXNzYWdlcy5tYXAoKG1lc3NhZ2UsIGluZGV4KSA9PiB7XG4gICAgICAgICAgICAgICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICAgICAgICAgICAgICA8bGkga2V5PXtgbWVzc2FnZS0ke2luZGV4fWB9PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHttZXNzYWdlLnRleHR9XG4gICAgICAgICAgICAgICAgICAgICAgICA8L2xpPlxuICAgICAgICAgICAgICAgICAgICApO1xuICAgICAgICAgICAgICAgIH0pfVxuICAgICAgICAgICAgPC9vbD5cbiAgICAgICAgKTtcbiAgICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IE1lc3NhZ2VMaXN0O1xuXG5cblxuLyoqIFdFQlBBQ0sgRk9PVEVSICoqXG4gKiogLi9jb21wb25lbnRzL21lc3NhZ2UtbGlzdC9pbmRleC5qc1xuICoqLyJdLCJzb3VyY2VSb290IjoiIn0=");
 
 /***/ },
 /* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var MessageEntryBox = function (_Component) {
-	    _inherits(MessageEntryBox, _Component);
-
-	    function MessageEntryBox() {
-	        _classCallCheck(this, MessageEntryBox);
-
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(MessageEntryBox).apply(this, arguments));
-	    }
-
-	    _createClass(MessageEntryBox, [{
-	        key: "render",
-	        value: function render() {
-	            return _react2.default.createElement(
-	                "div",
-	                { className: "message-entry-box" },
-	                _react2.default.createElement("textarea", {
-	                    name: "message",
-	                    value: this.props.value,
-	                    onChange: this.handleChange.bind(this),
-	                    onKeyPress: this.handleKeyPress.bind(this) })
-	            );
-	        }
-	    }, {
-	        key: "handleChange",
-	        value: function handleChange(event) {
-	            this.props.onChange(event.target.value);
-	        }
-	    }, {
-	        key: "handleKeyPress",
-	        value: function handleKeyPress(event) {
-	            event.preventDefault();
-
-	            if (event.which === 13) {
-	                this.props.onSubmit();
-	            }
-	        }
-	    }]);
-
-	    return MessageEntryBox;
-	}(_react.Component);
-
-	exports.default = MessageEntryBox;
+	eval("\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = __webpack_require__(1);\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar MessageEntryBox = function (_Component) {\n    _inherits(MessageEntryBox, _Component);\n\n    function MessageEntryBox() {\n        _classCallCheck(this, MessageEntryBox);\n\n        return _possibleConstructorReturn(this, Object.getPrototypeOf(MessageEntryBox).apply(this, arguments));\n    }\n\n    _createClass(MessageEntryBox, [{\n        key: \"render\",\n        value: function render() {\n            return _react2.default.createElement(\n                \"div\",\n                { className: \"message-entry-box\" },\n                _react2.default.createElement(\"textarea\", {\n                    name: \"message\",\n                    value: this.props.value,\n                    onChange: this.handleChange.bind(this),\n                    onKeyPress: this.handleKeyPress.bind(this) })\n            );\n        }\n    }, {\n        key: \"handleChange\",\n        value: function handleChange(event) {\n            this.props.onChange(event.target.value);\n        }\n    }, {\n        key: \"handleKeyPress\",\n        value: function handleKeyPress(event) {\n            event.preventDefault();\n\n            if (event.which === 13) {\n                this.props.onSubmit();\n            }\n        }\n    }]);\n\n    return MessageEntryBox;\n}(_react.Component);\n\nexports.default = MessageEntryBox;//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb21wb25lbnRzL21lc3NhZ2UtZW50cnktYm94L2luZGV4LmpzPzU2MTAiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7QUFBQTs7Ozs7Ozs7Ozs7O0lBRU07Ozs7Ozs7Ozs7O2lDQUNPO0FBQ0wsbUJBQ0k7O2tCQUFLLFdBQVUsbUJBQVYsRUFBTDtnQkFDSTtBQUNJLDBCQUFLLFNBQUw7QUFDQSwyQkFBTyxLQUFLLEtBQUwsQ0FBVyxLQUFYO0FBQ1AsOEJBQVUsS0FBSyxZQUFMLENBQWtCLElBQWxCLENBQXVCLElBQXZCLENBQVY7QUFDQSxnQ0FBWSxLQUFLLGNBQUwsQ0FBb0IsSUFBcEIsQ0FBeUIsSUFBekIsQ0FBWixFQUpKLENBREo7YUFESixDQURLOzs7O3FDQVlJLE9BQU87QUFDaEIsaUJBQUssS0FBTCxDQUFXLFFBQVgsQ0FBb0IsTUFBTSxNQUFOLENBQWEsS0FBYixDQUFwQixDQURnQjs7Ozt1Q0FJTCxPQUFPO0FBQ2xCLGtCQUFNLGNBQU4sR0FEa0I7O0FBR2xCLGdCQUFJLE1BQU0sS0FBTixLQUFnQixFQUFoQixFQUFvQjtBQUNwQixxQkFBSyxLQUFMLENBQVcsUUFBWCxHQURvQjthQUF4Qjs7OztXQXBCRjs7O2tCQTBCUyIsImZpbGUiOiI5LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7Q29tcG9uZW50fSBmcm9tICdyZWFjdCc7XG5cbmNsYXNzIE1lc3NhZ2VFbnRyeUJveCBleHRlbmRzIENvbXBvbmVudCB7XG4gICAgcmVuZGVyKCkge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtZXNzYWdlLWVudHJ5LWJveFwiPlxuICAgICAgICAgICAgICAgIDx0ZXh0YXJlYVxuICAgICAgICAgICAgICAgICAgICBuYW1lPVwibWVzc2FnZVwiXG4gICAgICAgICAgICAgICAgICAgIHZhbHVlPXt0aGlzLnByb3BzLnZhbHVlfVxuICAgICAgICAgICAgICAgICAgICBvbkNoYW5nZT17dGhpcy5oYW5kbGVDaGFuZ2UuYmluZCh0aGlzKX1cbiAgICAgICAgICAgICAgICAgICAgb25LZXlQcmVzcz17dGhpcy5oYW5kbGVLZXlQcmVzcy5iaW5kKHRoaXMpfSAvPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICk7XG4gICAgfVxuXG4gICAgaGFuZGxlQ2hhbmdlKGV2ZW50KSB7XG4gICAgICAgIHRoaXMucHJvcHMub25DaGFuZ2UoZXZlbnQudGFyZ2V0LnZhbHVlKTtcbiAgICB9XG5cbiAgICBoYW5kbGVLZXlQcmVzcyhldmVudCkge1xuICAgICAgICBldmVudC5wcmV2ZW50RGVmYXVsdCgpO1xuXG4gICAgICAgIGlmIChldmVudC53aGljaCA9PT0gMTMpIHtcbiAgICAgICAgICAgIHRoaXMucHJvcHMub25TdWJtaXQoKTtcbiAgICAgICAgfVxuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgTWVzc2FnZUVudHJ5Qm94O1xuXG5cblxuLyoqIFdFQlBBQ0sgRk9PVEVSICoqXG4gKiogLi9jb21wb25lbnRzL21lc3NhZ2UtZW50cnktYm94L2luZGV4LmpzXG4gKiovIl0sInNvdXJjZVJvb3QiOiIifQ==");
 
 /***/ },
 /* 10 */
 /***/ function(module, exports) {
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.updateMessage = updateMessage;
-	exports.addMessage = addMessage;
-	var UPDATE_MESSAGE = exports.UPDATE_MESSAGE = 'update-message';
-	var ADD_MESSAGE = exports.ADD_MESSAGE = 'add-message';
-
-	function updateMessage(message) {
-	    return { type: UPDATE_MESSAGE, message: message };
-	}
-
-	function addMessage() {
-	    return { type: ADD_MESSAGE };
-	}
+	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.updateMessage = updateMessage;\nexports.addMessage = addMessage;\nvar UPDATE_MESSAGE = exports.UPDATE_MESSAGE = 'update-message';\nvar ADD_MESSAGE = exports.ADD_MESSAGE = 'add-message';\n\nfunction updateMessage(message) {\n    return { type: UPDATE_MESSAGE, message: message };\n}\n\nfunction addMessage() {\n    return { type: ADD_MESSAGE };\n}//@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9hY3Rpb25zL21lc3NhZ2UtYWN0aW9ucy5qcz83OWY3Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O1FBR2dCO1FBSUE7QUFQVCxJQUFNLDBDQUFpQixnQkFBakI7QUFDTixJQUFNLG9DQUFjLGFBQWQ7O0FBRU4sU0FBUyxhQUFULENBQXVCLE9BQXZCLEVBQWdDO0FBQ25DLFdBQU8sRUFBRSxNQUFNLGNBQU4sRUFBc0IsZ0JBQXhCLEVBQVAsQ0FEbUM7Q0FBaEM7O0FBSUEsU0FBUyxVQUFULEdBQXNCO0FBQ3pCLFdBQU8sRUFBRSxNQUFNLFdBQU4sRUFBVCxDQUR5QiIsImZpbGUiOiIxMC5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjb25zdCBVUERBVEVfTUVTU0FHRSA9ICd1cGRhdGUtbWVzc2FnZSc7XG5leHBvcnQgY29uc3QgQUREX01FU1NBR0UgPSAnYWRkLW1lc3NhZ2UnO1xuXG5leHBvcnQgZnVuY3Rpb24gdXBkYXRlTWVzc2FnZShtZXNzYWdlKSB7XG4gICAgcmV0dXJuIHsgdHlwZTogVVBEQVRFX01FU1NBR0UsIG1lc3NhZ2UgfVxufVxuXG5leHBvcnQgZnVuY3Rpb24gYWRkTWVzc2FnZSgpIHtcbiAgICByZXR1cm4geyB0eXBlOiBBRERfTUVTU0FHRSB9XG59XG5cblxuXG4vKiogV0VCUEFDSyBGT09URVIgKipcbiAqKiAuL2FjdGlvbnMvbWVzc2FnZS1hY3Rpb25zLmpzXG4gKiovIl0sInNvdXJjZVJvb3QiOiIifQ==");
 
 /***/ }
 /******/ ]);
