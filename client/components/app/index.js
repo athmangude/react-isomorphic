@@ -4,11 +4,8 @@ import {bindActionCreators} from 'redux';
 
 import {} from './style.less';
 
-// import MessageList from '../message-list';
 import MessageList from 'components/message-list';
-// import MessageEntryBox from '../message-entry-box';
 import MessageEntryBox from 'components/message-entry-box';
-// import * as messageActionCreators from '../../actions/message-actions';
 import * as messageActionCreators from 'actions/message-actions';
 
 class App extends Component {
