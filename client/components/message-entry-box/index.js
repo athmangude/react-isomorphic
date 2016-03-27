@@ -23,9 +23,12 @@ class MessageEntryBox extends Component {
             const trimmedMessage = this.props.value.trim();
 
             if (trimmedMessage) {
-                this.props.onSubmit(trimmedMessage);
+                this.props.onSubmit({
+                    text: trimmedMessage,
+                    userId: this.props.userId
+                });
             }
-            
+
             event.preventDefault();
         }
     }
