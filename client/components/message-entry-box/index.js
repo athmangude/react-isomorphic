@@ -20,7 +20,12 @@ class MessageEntryBox extends Component {
 
     handleKeyPress(event) {
         if (event.which === 13) {
-            this.props.onSubmit();
+            const trimmedMessage = this.props.value.trim();
+
+            if (trimmedMessage) {
+                this.props.onSubmit(trimmedMessage);
+            }
+            
             event.preventDefault();
         }
     }
