@@ -10,11 +10,14 @@ import {Provider} from 'react-redux';
 import App from './generated/app';
 
 const app = express();
-const port = 3000;
 
 // configure the view engine
-app.engine('handlebars', handlebars({defaultLayout: 'main'}));
+app.engine('handlebars', handlebars({
+    defaultLayout: 'main',
+    layoutsDir: path.resolve(__dirname, 'views/layouts')
+}));
 app.set('view engine', 'handlebars');
+app.set('views', path.resolve(__dirname, 'views'));
 
 // configure static assets serving
 app.use(express.static(path.resolve(__dirname, '../dist')));
@@ -39,4 +42,4 @@ app.get('/', (request, response) => {
     });
 });
 
-app.listen(port, () => console.log('SERVER RUNNING: Listening on port ', port));
+export default app;
