@@ -3,17 +3,15 @@ import {UPDATE_MESSAGE, ADD_MESSAGE, ADD_RESPONSE} from '../actions/message-acti
 
 export default function (initialState) {
     function messages(currentMessages=initialState.messages, action) {
-        const messages = currentMessages.map(message => Object.assign({}, message));
-
         switch (action.type) {
-            case ADD_RESPONSE:
-                messages.push(Object.assign({}, action.message));
-                break;
             case ADD_MESSAGE:
-                messages.push({id: messages.length + 1, text: action.message});
+            case ADD_RESPONSE:
+                let messages = currentMessages.map(message => Object.assign({}, message));
+                messages.push(Object.assign({}, action.message))
+                return messages;
+            default:
+                return currentMessages;
         }
-
-        return messages;
     }
 
     function currentMessage(currentMessage=initialState.currentMessage, action) {
@@ -27,5 +25,13 @@ export default function (initialState) {
         }
     }
 
-    return combineReducers({ currentMessage, messages });
+    function userId(currentUserId=initialState.userId, action) {
+        if (action.type === 'SET_USER_ID') {
+            return action.userId;
+        }
+
+        return currentUserId;
+    }
+
+    return combineReducers({ userId, currentMessage, messages });
 }
