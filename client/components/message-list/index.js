@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {} from './style.less';
 
 class MessageList extends Component {
     constructor(props) {
