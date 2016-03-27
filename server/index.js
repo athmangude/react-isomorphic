@@ -25,6 +25,7 @@ app.use(express.static(path.resolve(__dirname, '../dist')));
 // routes
 app.get('/', (request, response) => {
     const initialState = {
+        userId: '',
         currentMessage: '',
         messages: []
     };
