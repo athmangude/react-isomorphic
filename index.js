@@ -1,5 +1,9 @@
 import server from './server';
 
+import http from 'http';
+
+import socketServer from './server/socket-server';
+
 var config = {};
 
 if (process.env.NODE_ENV === 'development') {
@@ -9,9 +13,11 @@ if (process.env.NODE_ENV === 'development') {
     server.locals.isDevelopment = true;
 }
 
-server.listen(config.port, config.host, function (error) {
+const webServer = server.listen(config.port, config.host, error => {
     if (error)
         throw error;
 
     console.log('Web server listening at http://%s:%d', config.host, config.port);
 });
+
+socketServer(webServer);
